@@ -12,7 +12,9 @@ Subsequently an Eventbridge rule is created to trigger the lambda based on a cro
 Create `ecs_start_stop` ECR manually in the AWS console.      
 The docker image linked to the lambda functions has to built and deployed manually. Following docker commands must be executed by going into the directory `./src`  
 
-Execute below command   
+Execute below command 
+- To build a Python Docker image `cd ./src`
+- To build a GoLang Docker image `cd ./src_golang`  
 `make ecr-deploy ACCOUNT_ID=AWS_ACCOUNT_ID REGION=us-east-1 TAG_VERSION=8`  
 
 OR execute below in sequence   
